@@ -82,7 +82,13 @@ const PFD = () => {
                     <img src="/Pages/VCockpit/instruments/B777/SVG/FlightDirector.svg" width='170' />
                 </div>
                 <div id="spdStripe">
-                    <img src="/Pages/VCockpit/instruments/B777/SVG/SpeedIndicator.svg" width='50' style={{transform:`translateY(${airspeedLock(),over30?(IAS-30)*5.27: 0}px)`}}/>
+                    <img src="/Pages/VCockpit/instruments/B777/SVG/SpeedIndicator.svg" width='1200' style={{transform:`translateX(${airspeedLock(),over30?((IAS-30)*-2.5): 0}px)`}}/>
+                </div>
+                <div id="spdBox">
+                    <img src="/Pages/VCockpit/instruments/B777/SVG/SpeedIndicatorBox.svg" width='50' />
+                </div>
+                <div id='speed'>
+                   <h1>{Math.round(IAS)}</h1> 
                 </div>
             </div>
     )
